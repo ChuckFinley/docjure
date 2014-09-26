@@ -41,6 +41,7 @@
   (if (DateUtil/isCellDateFormatted cell)
     (.getDateCellValue cell)
     (.getNumericCellValue cell)))
+(defmethod read-cell Cell/CELL_TYPE_ERROR     [^Cell cell]  nil)
 
 (defn load-workbook
   "Load an Excel .xls or .xlsx workbook from a file."
